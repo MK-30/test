@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .left {
+        background-color: rgb(142, 165, 42);
+        width: 109px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+
+      .special {
+        background-color: rgba(255, 127, 80, 0.329);
+      }
+
+      aside {
+        position: fixed;
+        top: 7px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">1</div>
+    <div class="left">2</div>
+    <div class="left">3</div>
+    <div class="left">4</div>
+    <div class="left">5</div>
+    <div class="left">6</div>
+    <div class="left">7</div>
+    <div class="left">8</div>
+    <div class="left special">9</div>
+    <div class="left">10</div>
+    <aside>
+      <button class="scroll-by">Scroll by 100px(y)</button>
+      <button class="scroll-to">Scroll to 100px(y)</button>
+      <button class="scroll-into">Scroll into special</button>
+    </aside>
+  </body>
+
+  <script>
+    const box = document.querySelector(".special");
+    box.addEventListener("click", () => {
+      console.log("box.clientWidth", box.clientWidth);
+      console.log("box.clientHeight", box.clientHeight);
+      console.log("domRect", box.getBoundingClientRect());
+    });
+  </script>
+</html>
